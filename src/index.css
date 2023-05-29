@@ -1,13 +1,706 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,500&display=swap');
+*{
+  padding: 0;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+  }
+body{
+  background-color: rgb(242,242,242);
+  margin-left:120px;
+  margin-right: 120px;
+}
+nav{
+  position: fixed;
+  left: 0;
+  right: 0; 
+  top: 0;
+  z-index: 1;
+  background-color: rgb(242,242,242);
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+}
+.links ul{
+  list-style-type: none;
+}
+.links li{
+  display: inline-block;
+}
+.links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  margin-left: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+.links li a:hover{
+  color: rgb(220, 222, 223);
+}
+nav:first-child{
+  font-size: 18px;
+}
+.link a{
+  text-decoration: none;
+  color: grey;
+  padding: 7px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.link a:hover{
+  background-color: rgb(16, 16, 228);
+  color: white;
+}
+.session{
+  text-align: center;
+  margin : 100px 0px 60px 0px;
+  font-family: 'Roboto', sans-serif;
+}
+.session h1{
+  font-size: 200px;
+  letter-spacing: 50px;
+  color: rgb(188, 198, 210);
+}
+.session p{
+  margin: 30px;
+  font-size: 18px;
+  word-spacing: 10px;
+  font-size: 17px;
+  color: rgb(52, 50, 50);
+}
+.session p span{
+  color: blue;
+}
+.session button a{
+text-decoration: none;
+color: white;
+font-size: 17px;
+}
+.session button{
+  padding: 10px;
+  border: none;
+  background-color: rgb(54, 54, 216);
+  border-radius: 5px;
+  margin: 15px;
+}
+.session button:hover{
+  background-color: rgb(4, 4, 253);
+  cursor: pointer;
+}
+.card{
+  display: flex;
+}
+.fcard{
+  width: 50%;
+  padding: 20px;
+  background-color: rgb(249, 251, 251);
+  margin: 10px 10px 20px 0px;
+  border-radius: 10px;
+ 
+}
+.scard{
+  width: 50%;
+  background-color: rgb(249, 251, 251);
+  margin: 10px 0px 20px 10px;
+  border-radius: 10px;
+  
+}
+.fcard .color-ani , .scard .color-ani{
+  margin:50px 50px 10px 50px;
+  color: blue;
+}
+.fcard .first{
+  margin:0px 50px 20px 50px;
+  font-size: 60px;
+}
+.scard .second{
+  margin:0px 50px 20px 50px;
+  font-size: 60px;
+}
+.fcard .second{
+ margin:50px 50px 20px 50px;
+ word-spacing: 5px;
+ line-height: 25px;
+ font-size: 19px;
+ color: grey;
+}
+.scard{
+  width: 50%;
+}
+.slide{
+ margin: 50px 40px 20px 40px;
+ background: linear-gradient(to right, #be93c5, #7bc6cc);
+ color: white;
+ height: 200px;
+ padding: 35px;
+ border-radius:10px;
+}
+.slide h4{
+  padding: 10px;
+  line-height: 22px;
+  font-size: 17px;
+}
+.slide p{
+  padding: 10px;
+  line-height: 22px;
+  font-size: 17px;
+}
+.slider{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.slider button{
+  width: 50px;
+  height: 6px;
+  border-radius: 2px;
+ background-color: white;
+  border: 1px solid blue;
+  margin: 5px 0px 0px 5px;
+  cursor: pointer;
+}
+.scard{
+  position: relative;
+}
+.scard img{
+ height: 800px;
+ width: 100%;
+ border-radius: 10px;
+}
+.scard .imgtext{
+  position: absolute;
+  top:0;
+}
+/* Timer */
+.timer{
+  display: flex;
+  margin: 20px 0px 20px 20px;
+  padding: 30px;
+  background: linear-gradient(to right, #4b79a1, #283e51); 
+  border-radius: 10px;
+}
+.seetime{
+  width: 30%;
+  padding: 20px;
+  margin: 10px 60px 10px 60px;
+}
+.seetime h4{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+  font-size: 17px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.time{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.time div h1{
+  color: white;
+  font-size: 100px;
+}
+.time div p{
+  color: white;
+  font-size: 20px;
+  margin-left: 27px;
+}
+/* conversation */
+.conver{
+  display: flex;
+  margin-top: 50px;
+}
+.con1{
+  position: relative;
+  width: 50%;
+  background-color: rgb(249, 251, 251);
+  margin: 10px 20px 20px 0px;
+  border-radius: 10px;
+  height: 700px;
+  overflow-y: hidden;
+}
+.con2{
+  width: 50%;
+  padding: 20px;
+  background-color: rgb(249, 251, 251);
+  margin: 10px 10px 20px 0px;
+  border-radius: 10px;
+  height: 700px;
+  overflow-y:auto;
+
+}
+.con2::-webkit-scrollbar {
+  display: none;
+}
+.con1 img{
+  height: 800px;
+  width: 100%;
+  border-radius: 10px;
+}
+.con-text{
+   position: absolute;
+   top: 0;
+}
+.con-text h4{
+  color: blue;
+  padding: 10px;
+  margin: 40px 0px 0px 40px;
+  font-family: 'Roboto', sans-serif;
+}
+.con-text p{
+  font-size: 40px;
+  margin-left: 45px;
+  font-family: 'Roboto', sans-serif;
+}
+/* information */
+.timestage{
+  display: flex;
+}
+.timestage p{
+  background-color: rgb(241, 242, 250);
+  padding: 7px;
+  margin-left: 35px;
+  color: rgb(38, 38, 154);
+  border-radius: 5px;
+}
+.information{
+  margin: 40px 30px 20px 30px;
+}
+.information h4{
+  font-size: 35px;
+  color: rgb(238, 47, 238);
+  margin: 20px;
+}
+.information > p{
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  color: grey;
+  line-height: 25px;
+}
+.sessio{
+width: 100%;
+height: 600px;
+position: relative;
+margin-top: 30px;
+}
+.ses-text{
+position:absolute;
+top: 0;
+margin: 30px;
+padding: 10px;
+color: White;
+font-size: 50px;
+font-family: 'Roboto', sans-serif;
+}
+
+.sessio img{
+  width: 100%;
+ height: 100%;
+ border-radius: 10px;
+}
+.speakers{
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 30px;
+}
+.speakers h3{
+  margin: 30px 0px 20px 30px;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+.speakers div{
+  margin: 30px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.profile{
+  text-align: center;
+}
+.profile{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 10px 10px 30px 10px;
+  cursor: pointer;
+}
+.partners{
+   background-color: white;
+   border-radius: 10px;
+   padding: 10px;
+   margin-top: 40px;
+}
+.partners h1{
+  margin: 20px;
+}
+.sponsers{
+ display: flex;
+ flex-wrap: wrap;
+ margin: 20px;
+}
+.sponsers div{
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(227, 226, 226);
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.spot{
+  padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.spot h2{
+  margin: 40px;
+  font-size: 50px;
+
+}
+.sessions p{
+  margin: 30px;
+  font-size: 18px;
+  word-spacing: 10px;
+  font-size: 17px;
+  color: rgb(52, 50, 50);
+}
+.sessions p span{
+  color: blue;
+}
+.sessions button a{
+text-decoration: none;
+color: white;
+font-size: 17px;
+}
+.sessions button{
+  padding: 10px;
+  border: none;
+  background-color: rgb(54, 54, 216);
+  border-radius: 5px;
+  margin: 30px;
+}
+.sessions button:hover{
+  background-color: rgb(4, 4, 253);
+  cursor: pointer;
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(7, 7, 7);
+  color: white;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+footer div p{
+  padding: 5px;
+}
+
+
+
+
+/* media query */
+
+@media  screen and (max-width:600px) {
+  body{
+    margin-left:0px;
+    margin-right: 0px;
+  }
+  nav{
+    position: sticky;
+    left: 0;
+    right: 0; 
+    top: 0;
+    z-index: 1;
+    background-color: rgb(242,242,242);
+    display: flex;
+    padding: 10px;
+  }
+    nav .links{
+      display: none;
+    }
+    
+.session{
+  text-align: center;
+  margin : 90px 0px 0px 0px;
+  font-family: 'Roboto', sans-serif;
+}
+.session h1{
+  font-size: 30px;
+  letter-spacing: 20px;
+  color: rgb(188, 198, 210);
+}
+.session p{
+  margin: 20px;
+  font-size: 18px;
+  word-spacing: 3px;
+  font-size: 17px;
+  color: rgb(52, 50, 50);
+}
+
+.session button a{
+text-decoration: none;
+color: white;
+font-size: 15px;
+}
+.session button{
+  padding: 8px;
+  border: none;
+  background-color: rgb(45, 45, 244);
+  border-radius: 3px;
+  margin: 15px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+}
+
+.fcard{
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(249, 251, 251);
+  margin: 30px 0px 0px 0px;
+  border-radius: 10px;
+ 
+}
+.scard{
+  width: 100%;
+  background-color: rgb(249, 251, 251);
+  margin: 30px 0px 0px 0px;
+  border-radius: 10px;
+  
+}
+.fcard .color-ani {
+  margin:20px 0px 0px 0px;
+  color: blue;
+}
+.scard .color-ani{
+  margin:20px 0px 0px 20px;
+  color: blue;
+}
+.fcard .first{
+  margin:20px 0px 0px 0px;
+  font-size: 30px;
+}
+.scard .second{
+  margin:20px 0px 0px 20px;
+  font-size: 30px;
+}
+.fcard .second{
+ margin:20px 0px 0px 0px;
+ word-spacing: 3px;
+ line-height: 20px;
+ font-size: 16px;
+ color: grey;
+}
+.scard{
+  width: 100%;
+}
+.slide{
+ margin: 20px 0px 0px 0px;
+ background: linear-gradient(to right, #be93c5, #7bc6cc);
+ color: white;
+ height: 180px;
+ padding: 0px;
+ border-radius:10px;
+}
+.slide h4{
+  padding: 10px;
+  line-height: 22px;
+  font-size: 17px;
+}
+.slide p{
+  padding: 10px;
+  line-height: 22px;
+  font-size: 17px;
+}
+.slider{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.slider button{
+  width: 40px;
+  height: 6px;
+  border-radius: 2px;
+ background-color: white;
+  border: 1px solid blue;
+  margin: 20px 0px 0px 5px;
+  cursor: pointer;
+}
+.scard{
+  position: relative;
+}
+.scard img{
+ height: 800px;
+ width: 100%;
+ border-radius: 10px;
+}
+.scard .imgtext{
+  position: absolute;
+  top:0;
+}
+.timer{
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px 0px 0px;
+  padding: 10px;
+  background: linear-gradient(to right, #4b79a1, #283e51); 
+  border-radius: 10px;
+}
+.seetime{
+  width: 100%;
+  padding: 0px;
+  margin: 10px 0px 0px 10px;
+}
+.seetime h4{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.time{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.time div h1{
+  color: white;
+  font-size: 30px;
+}
+.time div p{
+  color: white;
+  font-size: 16px;
+  margin-left: 0px;
+}
+
+/* conversation */
+.conver{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.con1{
+  position: relative;
+  width: 100%;
+  background-color: rgb(249, 251, 251);
+  margin: 0px 0px 0px 0px;
+  border-radius: 10px;
+  height: 700px;
+  overflow-y: hidden;
+}
+.con2{
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(249, 251, 251);
+  margin: 10px 10px 20px 0px;
+  border-radius: 10px;
+  height: 700px;
+  overflow-y:auto;
+
+}
+
+.con1 img{
+  height: 800px;
+  width: 100%;
+  border-radius: 10px;
+}
+.con-text{
+   position: absolute;
+   top: 0;
+}
+.con-text h4{
+  color: blue;
+  padding: 10px;
+  font-size: 15px;
+  margin: 40px 0px 0px 40px;
+  font-family: 'Roboto', sans-serif;
+}
+.con-text p{
+  font-size: 20px;
+  margin-left: 45px;
+  font-family: 'Roboto', sans-serif;
+}
+/* information */
+.timestage{
+  display: flex;
+}
+.timestage p{
+  background-color: rgb(241, 242, 250);
+  padding: 7px;
+  margin-left: 15px;
+  color: rgb(38, 38, 154);
+  border-radius: 5px;
+  font-size: 14px;
+}
+.information{
+  margin: 20px 0px 0px 0px;
+}
+.information h4{
+  font-size: 20px;
+  color: rgb(238, 47, 238);
+  margin: 20px;
+}
+.information > p{
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  color: grey;
+  line-height: 22px;
+}
+
+
+.sessio{
+  width: 100%;
+  height: 600px;
+  position: relative;
+  }
+  .ses-text{
+  position:absolute;
+  top: 0;
+  margin: 0px;
+  padding: 10px;
+  color: White;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  }
+  .sessio img{
+    width: 100%;
+   height: 100%;
+   border-radius: 10px;
+  }
+
+  .speakers h3{
+    margin: 30px 0px 20px 30px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .speakers div{
+    margin: 30px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .profile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px 10px 30px 10px;
+    cursor: pointer;
+  }
+
+ .sponsers div{
+   width: 100px;
+   height: 100px;
+ }
+
+ footer{
+  display: flex;
+  flex-direction: column;
+ }
+ 
 }
